@@ -2,14 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Najam Ul Hassan | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-style: italic;
+      color: #dcdcdc;
+      margin-top: 0.5rem;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .alt {
+      background: #f4f7fc;
+    }
+
+    h2 {
+      color: #1e3c72;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    ul.skills {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      padding: 0;
+    }
+
+    ul.skills li {
+      background: #007acc;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .project {
+      background: white;
+      border-left: 4px solid #1e3c72;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .project a {
+      color: #007acc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #222;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <h1>Najam Ul Hassan</h1>
-    <p>DevOps Engineer</p>
+    <p>DevOps Engineer </p>
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -18,42 +122,48 @@
     </nav>
   </header>
 
-  <section id="about">
+  <section id="about" class="section">
     <h2>About Me</h2>
-    <p>I am a DevOps Engineer, with 2+ years of industry experience working on real-time projects including Odoo ERP, WordPress sites, Django apps, Spring Boot, and Java-based applications. I specialize in streamlining software delivery through automation, quality assurance, monitoring, and testing. I have built and deployed 100+ applications on both local servers and cloud platforms, ensuring high availability and smooth CI/CD pipelines. Tools: Docker, Kubernetes, Jenkins, GitLab CI, AWS, Digital Ocean. </p>
+    <p>I am a DevOps Engineer with 2+ years of experience working on real-time projects including Odoo ERP, WordPress sites, Django apps, Spring Boot, and Java-based applications. I specialize in streamlining software delivery through automation, quality assurance, monitoring, and testing. I have built and deployed 100+ applications on both local servers and cloud platforms, ensuring high availability and smooth CI/CD pipelines. Tools: Docker, Kubernetes, Jenkins, GitLab CI, AWS, Digital Ocean</p>
   </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
+  <section id="skills" class="section alt">
+    <h2>🛠 Skills</h2>
+    <ul class="skills">
       <li>Linux</li>
+      <li>Git & GitHub</li>
       <li>Docker</li>
       <li>Kubernetes</li>
-      <li>AWS</li>
-      <li>Git & GitHub</li>
       <li>Jenkins</li>
+      <li>AWS</li>
+      <li>Terraform</li>
+      <li>Ansible</li>
     </ul>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="https://github.com/Najam-ul-hassan343/django-notes-app" target="_blank">Django notes application CI/CD on AWS with Jenkins</a></li>
-      <li><a href="https://github.com/yourusername/two-tier-app" target="_blank">Dockerized Two tier flask Application and deploy on AWS EC2</a></li>
-    </ul>
+  <section id="projects" class="section">
+    <h2>projects</h2>
+    <div class="project">
+      <h3>WordPress CI/CD Pipeline</h3>
+      <p>Set up a fully automated WordPress deployment on AWS using Jenkins, Docker, and GitHub integration.</p>
+      <a href="https://github.com/Najam-ul-hassan343/WordPress-docker-deployment" target="_blank">View on GitHub →</a>
+    </div>
+    <div class="project">
+      <h3>Dockerized Django App</h3>
+      <p>Developed a Django notes app, containerized using Docker and deployed using custom Nginx reverse proxy.</p>
+      <a href="https://github.com/yourusername/django-notes-app" target="_blank">View on GitHub →</a>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: najam.hassan.dev@gmail.com</p>
-    <p>Phone: 03208267361</p>
-    <p>GitHub: <a href="https://github.com/yourusername">github.com/Najam-ul-hassan343</a></p>
+  <section id="contact" class="section alt">
+    <h2> Contact</h2>
+    <p>Email: <a href="mailto:your.email@example.com">najam.hassan.dev@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/Najam-ul-hassan343</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 </p>
+    &copy; 2025. All rights reserved.
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
